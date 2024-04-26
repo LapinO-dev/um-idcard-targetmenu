@@ -7,7 +7,7 @@ CreateThread(function()
             {
                 event = 'um-idcard-menu:menu',
                 icon = "fa-solid fa-license",
-                label = "Récupéré Identité / Licence / Permis",
+                label = "ID Menu",
                 distance = 1.5
             }
         },
