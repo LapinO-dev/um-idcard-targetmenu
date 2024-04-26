@@ -1,15 +1,15 @@
-local idCardNpcPoint = lib.points.new(Config.NPC.coords, 2)
-
-function idCardNpcPoint:onEnter()
-    lib.showTextUI('[E] - Identity Menu', {position = "left-center",icon = 'id-card'})
-end
-
-function idCardNpcPoint:onExit()
-    lib.hideTextUI()
-end
-
-function idCardNpcPoint:nearby()
-    if self.currentDistance < 1 and IsControlJustReleased(0, 38) then
-        lib.showContext("identity_menu")
-    end
-end
+CreateThread(function()
+    exports.ox_target:addSphereZone({
+    	name = "identityMenu",
+    	coords = Config.NPC.coords,
+    	radius = 1.05,
+        options = {
+            {
+                event = 'um-idcard-menu:menu',
+                icon = "fa-solid fa-license",
+                label = "Récupéré Identité / Licence / Permis",
+                distance = 1.5
+            }
+        },
+    })
+end)
