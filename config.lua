@@ -1,13 +1,18 @@
 Config = {}
 
 Config.NPC = {
-    coords = vector4(-254.73, -943.24, 31.22, 250.34),
-    model = 'a_m_m_business_01'
+    coords = vector4(441.54, -979.16, 30.69, 129.50),
+    model = 's_m_y_cop_01'
+}
+
+-- Title
+Config.Title = {
+    identite  = "ID Menu",
 }
 
 Config.MenuCards = {
     {
-        title = 'ID Card',
+        title = 'Id Card',
         icon = 'id-card',
         args = {
             itemName = 'id_card'
